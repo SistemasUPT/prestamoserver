@@ -3,34 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirigiendo al Sistema de Préstamos - UPT</title>
+    <title>Sistema de Préstamo de Servidores - UPT</title>
     <script>
-        // Redirección inmediata y segura
+        // Redirección inmediata al Apps Script
         const scriptId = '1aJmVy3JYRJZJUcUJunf-Qg_bVZ-QXBd7BI_QFQqQ9EA';
         const appUrl = `https://script.google.com/macros/s/${scriptId}/exec`;
         
-        // Redirección con timeout por si hay problemas
-        setTimeout(() => {
-            window.location.replace(appUrl);
-        }, 100);
+        // Redirección con fallback
+        window.location.replace(appUrl);
     </script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 50px;
-            background: #f5f5f5;
+            color: white;
         }
-        .loading {
-            color: #666;
-            margin: 20px 0;
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 15px 0;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
     </style>
 </head>
 <body>
-    <div class="loading">
-        <h2>Redirigiendo al Sistema de Préstamo de Servidores...</h2>
-        <p>Por favor espere</p>
+    <div class="container">
+        <h1>Sistema de Préstamo de Servidores</h1>
+        <p>Universidad Privada de Tacna</p>
+        
+        <p>Redirigiendo a la aplicación...</p>
+        
+        <div style="margin-top: 30px;">
+            <a href="https://script.google.com/macros/s/1aJmVy3JYRJZJUcUJunf-Qg_bVZ-QXBd7BI_QFQqQ9EA/exec" class="btn">
+                📋 Acceder al Sistema directamente
+            </a>
+        </div>
     </div>
 </body>
+</html>
 </html>
